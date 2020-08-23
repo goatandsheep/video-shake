@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<head>
+  <script src="index.js"></script>
+  <link rel="stylesheet" href="index.css" />
+  <title>Video shake demo</title>
+</head>
+<body>
+  <h1>Video Shake Demo</h1>
+  <p>
+    This demonstrates that short video shakes can be implemented on videos from
+    events in CSS.
+  </p>
+  <iframe
+    width="560"
+    class="video-shake-receiver"
+    height="315"
+    src="https://www.youtube.com/embed/m0_kIkodrds"
+    frameborder="0"
+    allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+    allowfullscreen
+  ></iframe>
+  <button onclick="videoShake()">shake</button>
+</body>

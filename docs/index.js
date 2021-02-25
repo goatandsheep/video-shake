@@ -1,7 +1,4 @@
-/**
- * @param {DOMString} [element='video']
- */
-function videoShake(elements='video') {
+function videoShake(elements='.video-shake-receiver') {
     const els = document.querySelectorAll(elements);
 
     const keyframes = [
@@ -33,5 +30,3 @@ function videoShake(elements='video') {
         els[i].animate(keyframes, timing)
     }
 }
-
-module.exports = videoShake

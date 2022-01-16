@@ -62,7 +62,7 @@ class DomJitter {
      * @param {String} [videoElementsSelector='video']
      * @param {Number} [duration=75] milliseconds per loop
      */
-    constructor(videoElementsSelector, duration=0.075) {
+    constructor(videoElementsSelector, duration=75) {
         this.videoElementsList = document.querySelectorAll(videoElementsSelector);
         this.length = this.videoElementsList.length;
         
@@ -97,26 +97,26 @@ class DomJitter {
         document.getElementsByTagName('head')[0].appendChild(style);
     }
     /**
-     * 
+     * Starts an infinite jitter loop
      */
-    startLoop() {
+    start() {
         for (let i = 0; i < this.length; i++) {
             // TODO: add class
             this.videoElementsList[i].classList.add(this.identifier);
         }
     }
     /**
-     * 
+     * Stops infinite jitter loop
      */
-    stopLoop() {
+    stop() {
         for (let i = 0; i < this.length; i++) {
             // TODO: remove class
             this.videoElementsList[i].classList.remove(this.identifier);
         }
     }
     /**
-     * time for the pulse is iterations * duration
-     * @param {Number} [duration=100] duration of each loop iteration in milliseconds, i.e. the lower the value, the faster the shake
+     * timed pulse where pulse time is iterations * duration
+     * @param {Number} [duration=this.duration] duration of each loop iteration in milliseconds, i.e. the lower the value, the faster the shake
      * @param {Number} [iterations=2] iterations
      */
     pulse(duration=this.duration, iterations=2) {

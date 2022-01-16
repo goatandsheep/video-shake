@@ -22,10 +22,13 @@ npm i dom-jitter
 Duration is the speed of the jitter and iterations is how long you want it to 
 
 ```javascript
-import videoShake from 'dom-jitter'
+import DomJitter from 'dom-jitter'
 
-const videoQuery = '.sample-video' // uses CSS query selectors
-videoShake(videoQuery)
+const jitterController = new DomJitter('.sample-video', 75) // uses CSS query selectors
+jitterController.pulse(75, 2)
+
+jitterController.start()
+jitterController.stop()
 ```
 
 

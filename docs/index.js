@@ -23,8 +23,8 @@ function videoShake(elements='.video-shake-receiver') {
         },
     ]
     const timing = {
-        duration: 75,
-        iterations: 2
+        duration: 100,
+        iterations: 10
     }
     for (let i = 0, len = els.length; i < len; i++) {
         els[i].animate(keyframes, timing)

@@ -11,4 +11,22 @@
 
 ![video-shake](./docs/video-shake.gif)
 
+## Installation
+
+```shell
+npm i dom-jitter
+```
+
+## Node Example
+
+Duration is the speed of the jitter and iterations is how long you want it to 
+
+```javascript
+import videoShake from 'dom-jitter'
+
+const videoQuery = '.sample-video' // uses CSS query selectors
+videoShake(videoQuery)
+```
+
+
 Brought to you by [beatcaps.io](https://www.beatcaps.io)
